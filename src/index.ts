@@ -70,7 +70,7 @@ interface IRepo {
    * Next, generate diagram
    */
   const sum = morning + daytime + evening + night;
-  const highest = morning;
+  let highest = morning;
   if (daytime > highest) highest = daytime;
   if (evening > highest) highest = evening;
   if (night > highest) highest = night;
