@@ -70,6 +70,10 @@ interface IRepo {
    * Next, generate diagram
    */
   const sum = morning + daytime + evening + night;
+  const highest = morning;
+  if (daytime > highest) highest = daytime;
+  if (evening > highest) highest = evening;
+  if (night > highest) highest = night;
   if (!sum) return;
 
   const oneDay = [
@@ -80,7 +84,7 @@ interface IRepo {
   ];
 
   const lines = oneDay.reduce((prev, cur) => {
-    const percent = cur.commits / sum * 100;
+    const percent = cur.commits / highest * 100;
     const line = [
       `${cur.label}`.padEnd(10),
       `${cur.commits.toString().padStart(5)} commits`.padEnd(14),
