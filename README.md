@@ -5,3 +5,4 @@
 - change bar's percent basis to highest one's percent from sum of all that 100%
 
 - change icon represents each state 🏙️ 🌆 🌃 
+
